@@ -1,21 +1,19 @@
+// firebase.js
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
-import { collection, addDoc, getDocs } from "@firebase/firestore"; // Perbarui ini
+import { getFirestore } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
-
-// Your web app's Firebase configuration
+// Direct Firebase config (fine for dev)
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
- };
+  apiKey: "AIzaSyDrwrj-7ZOuDA8H0DU4loNIZEH-8T00hLs",
+  authDomain: "portfolio-a0b8f.firebaseapp.com",
+  projectId: "portfolio-a0b8f",
+  storageBucket: "portfolio-a0b8f.firebasestorage.app",
+  messagingSenderId: "729852217338",
+  appId: "1:729852217338:web:cc0466d51b96eccde74643",
+};
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { db, collection, addDoc };
+export { db, collection, addDoc, getDocs };
