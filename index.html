@@ -19,16 +19,24 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  
-    <!-- Google tag (gtag.js) -->
+
+    <!-- ✅ Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM4DDLJPGL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
-  
       gtag('config', 'G-FM4DDLJPGL');
     </script>
+
+    <!-- ✅ Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "411c4b0f2b864ce595369d3af239915f"}'
+    ></script>
   </body>
   
 </html>
